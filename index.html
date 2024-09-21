@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signature App</title>
+    <!-- =============TAILWIND CSS================ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              gowun: ["Gowun Batang", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ===========FONTS================= -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/png/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container xl:max-w-[1140px] mx-auto px-6 mt-12">
+      <div class="flex items-center -mx-4">
+        <div class="w-4/12 px-4">
+          <p class="text-xl font-bold font-gowun text-center mb-4">
+            Text Color
+          </p>
+          <input
+            id="color-picker"
+            type="color"
+            class="border border-black p-1 h-10 w-full"
+          />
+        </div>
+        <div class="w-4/12 px-4">
+          <p class="text-xl font-bold font-gowun text-center mb-4">
+            Background
+          </p>
+          <input
+            id="canvas-color"
+            type="color"
+            class="border border-black p-1 h-10 w-full"
+          />
+        </div>
+        <div class="w-4/12 px-4">
+          <p class="text-xl font-bold font-gowun text-center mb-4">Font Size</p>
+          <select
+            id="font-size"
+            class="w-full border h-10 p-2 border-black outline-none"
+          >
+            <option value="5px">5px</option>
+            <option value="10px">10px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+            <option value="40px">40px</option>
+          </select>
+        </div>
+      </div>
+      <canvas
+        id="canvas-box"
+        class="border border-black mx-auto mt-10"
+        width="800"
+        height="300"
+      ></canvas>
+      <div class="flex gap-4 mt-10 flex-wrap items-center justify-center">
+        <button
+          id="clear"
+          class="px-12 p-3 rounded bg-red-500 text-white font-gowun font-semibold text-xl"
+        >
+          Clear
+        </button>
+        <button
+          id="download"
+          class="px-12 p-3 rounded bg-sky-500 text-white font-gowun font-semibold text-xl"
+        >
+          Save and Download
+        </button>
+        <button
+          id="saved"
+          class="px-12 p-3 rounded bg-violet-500 text-white font-gowun font-semibold text-xl"
+        >
+          Show Saved
+        </button>
+      </div>
+    </div>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
